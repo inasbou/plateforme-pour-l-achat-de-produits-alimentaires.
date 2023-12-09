@@ -23,6 +23,14 @@ const page = () => {
       setSelectedProducts([...selectedProducts, productId]);
     }
   };
+
+  const calculateTotal = () => {
+    // Calculate the total sum of selected products
+    const total = basketItems
+      .filter((product) => selectedProducts.includes(product.id))
+      .reduce((sum, product) => sum + product.price, 0);
+    return total;
+  };
   const modalOverlayStyles = {
     position: 'fixed',
     top: 0,
@@ -46,14 +54,14 @@ const page = () => {
     position: 'relative',
   };
   return (
-    <div className='flex flex-col '>
+    <div className='flex flex-col bg-green-50 h-min-screen'>
         <Navbar/>
-   <div className='flex flex-row md:m-6 font-semibold  justify-center  text-green-600  text-lg md:text-6xl'>
+   <div className='flex flex-row md:m-6 font-semibold  justify-center   text-green-600  text-lg md:text-6xl'>
    <SlBasket /> <h1>My basket </h1>
         </div>
         <div className="flex flex-wrap justify-center mt-16">
         {basketItems.map((product, key) => (
-          <div className=" gap-1 flex  justify-center  flex-row-reverse rounded-xl shadow-lg  m-4  md:py-8 px-4    ">
+          <div className=" gap-1 flex  justify-center  bg-white flex-row-reverse rounded-xl shadow-lg  m-4  md:py-8 px-4    ">
             <div className=" flex flex-col text-center px-2">
               <p className=" text-xl font-bold text-green-700">
                
@@ -83,27 +91,36 @@ const page = () => {
         <button onClick={toggleModal} className="rounded-md md:mt-3 bg-white p-4 md:px-12 border-green-500 border text-green-600 hover:ease-in duration-300">Order</button>
 
         {showModal && (
-          <div style={modalOverlayStyles}>
+        <div style={modalOverlayStyles}>
           <div style={modalStyles}>
-              <span  onClick={toggleModal} className="font-bold text-3xl">&times;</span>
-              <h2>Select Products</h2>
-              <form>
-                {basketItems.map((product) => (
-                  <div key={product.name} >
-                    <label className="  text-lg font-medium">
-                      <input
-                        type="checkbox"
-                        value={product.name}
-                        checked={selectedProducts.includes(product.id)}
-                        onChange={() => handleCheckboxChange(product.id)}
-                      />
-                      {product.name}
-                    </label>
-                  </div>
-                ))}
-                <button type="button" onClick={toggleModal} className="rounded-md md:mt-3 flex  justify-center text-white px-4 md:px-12 bg-green-500 border ">Order now</button>
-              </form>
-            </div>
+            <span onClick={toggleModal} className='font-bold text-3xl'>
+              &times;
+            </span>
+            <h2>Select Products</h2>
+            <form>
+              {basketItems.map((product) => (
+                <div key={product.id}>
+                  <label className='text-lg font-medium'>
+                    <input
+                      type='checkbox'
+                      value={product.id}
+                      checked={selectedProducts.includes(product.id)}
+                      onChange={() => handleCheckboxChange(product.id)}
+                    />
+                    {product.name}
+                  </label>
+                </div>
+              ))}
+              <p>Total: {calculateTotal()} DA </p>
+              <button
+                type='button'
+                onClick={toggleModal}
+                className='rounded-md md:mt-3 flex justify-center text-white px-4 md:px-12 bg-green-500 border'
+              >
+                Order now
+              </button>
+            </form>
+          </div>
           </div>
         )}
       </div></div>

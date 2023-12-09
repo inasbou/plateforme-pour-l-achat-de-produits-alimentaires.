@@ -3,7 +3,7 @@ import React  from 'react'
 
 const StatCard = (props) => {
   return (
-    <div className="flex flex-col gap-1 bg-green-500 rounded-xl shadow-lg  m-4  md:py-8 px-8 md:px-20 hover:shadow-xl  sm:w-52  md:w-auto">
+    <div className="flex flex-col gap-1 border border-green-500 rounded-xl shadow-lg  m-4  md:py-8 px-8 md:px-20 hover:shadow-xl  sm:w-48  md:w-auto">
     
     
      <div className='flex   flex-row-reverse '>

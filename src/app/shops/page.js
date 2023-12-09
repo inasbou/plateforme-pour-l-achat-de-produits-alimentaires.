@@ -4,6 +4,7 @@ import shops from '../temp/shops.json';
 import Store from './Store';
 import {IoSearchOutline} from 'react-icons/io5';
 import { MdOutlineFilterList } from "react-icons/md";
+import Navbar from '../home/Navbar';
 
 const Shops = () => {
   const [selectedWilaya, setSelectedWilaya] = useState('');
@@ -70,22 +71,24 @@ const Shops = () => {
   };
 
   return (
-    <div className='flex justify-center  min-w-screen min-h-screen bg-green-50 flex-col items-center '>
-      <div className='flex flex-row mt-6 gap-6'>
+    <div className="  min-h-screen bg-green-50">
+    <div className='flex justify-center  min-w-screen   flex-col  '>
+      <Navbar/>
+      <div className='flex flex-row mt-6 gap-2 justify-center '>
       <div className=" relative   ">
           <input
             type="text"
             placeholder="Search by title"
             value={searchTerm}
             onChange={handleSearch}
-            className="border-2  border-gray-300 rounded-2xl md:pl-8  px-2 md:pr-4 py-2 "
+            className="border-2  border-gray-300 rounded-2xl md:w-auto w-24 md:pl-8  md:px-2 md:pr-4 py-2 "
           />
           <div className="absolute top-0 left-2 mt-3">
-            <IoSearchOutline className="text-gray-400" />
+            <IoSearchOutline className="text-gray-400 hidden md:flex" />
           </div>
         </div>
         <div className='relative'>
-        <select value={selectedWilaya} onChange={handleWilayaChange}  className="pl-8 p-2 rounded-xl bg-white border-2  border-gray-300">
+        <select value={selectedWilaya} onChange={handleWilayaChange}  className="md:pl-8 p-2 md:w-auto w-24 rounded-xl  bg-white border-2  border-gray-300">
           <option value='' >Filter by  Wilaya</option>
           {wilayas.map((wilaya, index) => (
             <option key={index} value={wilaya}>
@@ -94,11 +97,11 @@ const Shops = () => {
           ))}
         </select>
         <div className="absolute top-0 left-2 mt-3">
-            <MdOutlineFilterList className="text-gray-400" />
+            <MdOutlineFilterList className="text-gray-400 hidden md:flex" />
           </div>
         </div>
         {selectedWilaya && (
-          <select value={selectedCommune} onChange={handleCommuneChange} className="pl-8 p-2 rounded-xl bg-white border-2  border-gray-300" >
+          <select value={selectedCommune} onChange={handleCommuneChange} className="pl-8 p-2 w-24 md:w-auto rounded-xl bg-white border-2  border-gray-300" >
             <option value=''>Select Commune</option>
             {communes.map((commune, index) => (
               <option key={index} value={commune}>
@@ -109,7 +112,7 @@ const Shops = () => {
         )}
       </div>
 
-      <div className='flex flex-wrap jsutify-center '>
+      <div className='flex flex-wrap  justify-center '>
         {searchResults.map((shop, index) => (
           <Store
             id={shop.id}
@@ -123,7 +126,7 @@ const Shops = () => {
           />
         ))}
       </div>
-    </div>
+    </div></div>
   );
 };
 
