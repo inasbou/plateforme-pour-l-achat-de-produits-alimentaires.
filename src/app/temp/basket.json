@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Apple",
+    "brand": "Fresh Farms",
+    "type": "fruits et légumes",
+    "price": 2.99,
+    "image": "/images/products/apple.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Spinach",
+    "brand": "Taylor",
+    "type": "fruits et légumes",
+    "price": 1.49,
+    "image": "/images/spinach.png"
+  },
+  {
+    "id": 3,
+    "name": "Almonds",
+    "brand": "Bulk Barn",
+    "type": "produits en vrac",
+    "price": 3.75,
+    "image": "/images/products/almond.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Oregano",
+    "brand": "Bulk Barn",
+    "type": "épices",
+    "price": 2.25,
+    "image": "/images/products/oregano.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Turmeric",
+    "brand": "Organic Spice Co.",
+    "type": "épices",
+    "price": 4.50,
+    "image": "/images/products/turmeric.jpeg"
+  }
+]

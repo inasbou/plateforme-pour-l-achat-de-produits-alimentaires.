@@ -1,0 +1,171 @@
+ [
+    {
+      "id": 1,
+      "name": "FreshMart",
+      "description": "Your one-stop shop for fresh produce and more",
+      "image": "https://example.com/freshmart.jpg",
+      "products": [
+        {
+          "name": "Apple",
+          "brand": "Fresh Farms",
+          "type": "fruits et légumes",
+          "price": 400,
+          "image": "/images/products/apple.jpeg"
+        },
+        {
+          "name": "Spinach",
+          "brand": "Taylor",
+          "type": "fruits et légumes",
+          "price": 150,
+          "image":"/images/spinach.png"
+        },
+        {
+          "name": "Cinnamon",
+          "brand": "Spice Haven",
+          "type": "épices",
+          "price": 120,
+          "image": "/images/products/cinamon.jpeg"
+        },
+        {
+          "name": "Milk",
+          "brand": "Soumame",
+          "type": "produits laitiers",
+          "price": 130,
+          "image": "/images/products/soumam.jpg"
+        },{
+          "name": "Couscous",
+          "brand": "Amor benamor",
+          "type": "épicerie salée",
+          "price": 190,
+          "image": "/images/products/couscous.jpeg"
+        },{
+          "name": "Yaourt",
+          "brand": "Soumame",
+          "type": "produits laitiers",
+          "price": 40,
+          "image": "/images/products/jnina.jpeg"
+        },{
+          "name": "Gateau",
+          "brand": "Bimo",
+          "type": "épicerie sucrée",
+          "price": 100,
+          "image": "/images/products/bimo.jpeg"
+        },{
+          "name": "Macarouni",
+          "brand": "Amor benamor",
+          "type": "épicerie salée",
+          "price": 80,
+          "image": "/images/products/makaroune.jpeg"
+        },{
+          "name": "Tomato ",
+          "brand": "Cab",
+          "type": "épicerie salée",
+          "price": 260,
+          "image": "/images/products/cab.jpeg"
+        },{
+          "name": "Riz",
+          "brand": "SOS",
+          "type": "épicerie salée",
+          "price": 210,
+          "image": "/images/products/riz.jpeg"
+        },{
+          "name": "Oil",
+          "brand": "Elio",
+          "type": "épicerie salée",
+          "price": 140,
+          "image": "/images/products/elio.jpeg"
+        },{
+          "name": "Cheese",
+          "brand": "Tartino",
+          "type": "produits laitiers",
+          "price": 200,
+          "image": "/images/products/tartino.jpeg"
+        },{
+          "name": "Couscous",
+          "brand": "Mamma",
+          "type": "épicerie salée",
+          "price": 170,
+          "image": "/images/products/cousmama.jpeg"
+        },{
+          "name": "Semoulina",
+          "brand": "Mamma",
+          "type": "épicerie salée",
+          "price": 250,
+          "image": "/images/products/semoul.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bulk Barn",
+      "description": "The ultimate destination for bulk goods",
+      "image": "https://example.com/bulkbarn.jpg",
+      "products": [
+        {
+          "name": "Quinoa",
+          "brand": "Bulk Barn",
+          "type": "produits en vrac",
+          "price": 4.99,
+          "image": "https://example.com/quinoa.jpg"
+        },
+        {
+          "name": "Almonds",
+          "brand": "Bulk Barn",
+          "type": "produits en vrac",
+          "price": 3.75,
+          "image": "https://example.com/almonds.jpg"
+        },
+        {
+          "name": "Oregano",
+          "brand": "Bulk Barn",
+          "type": "épices",
+          "price": 2.25,
+          "image": "https://example.com/oregano.jpg"
+        },
+        {
+          "name": "Yogurt",
+          "brand": "Dairy Delight",
+          "type": "produits laitiers",
+          "price": 3.49,
+          "image": "https://example.com/yogurt.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Organic Oasis",
+      "description": "Providing the best organic products",
+      "image": "/images/spinach.png",
+      "products": [
+        {
+          "name": "Kale",
+          "brand": "Organic Farms",
+          "type": "fruits et légumes",
+          "price": 2.25,
+          "image": "/images/spinach.png"
+        },
+        {
+          "name": "Turmeric",
+          "brand": "Organic Spice Co.",
+          "type": "épices",
+          "price": 4.50,
+          "image": "https://example.com/turmeric.jpg"
+        },
+        {
+          "name": "Cheese",
+          "brand": "Organic Dairy",
+          "type": "produits laitiers",
+          "price": 5.99,
+          "image": "https://example.com/cheese.jpg"
+        },
+        {
+          "name": "Chickpeas",
+          "brand": "Organic Farms",
+          "type": "produits en vrac",
+          "price": 2.99,
+          "image": "https://example.com/chickpeas.jpg"
+        }
+      ]
+    }
+  ]
+
